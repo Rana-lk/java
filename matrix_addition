@@ -47,7 +47,7 @@ public class matrix1 {
                 m3[i][j]=m1.a[i][j]+m2.a[i][j];
             }
         }
-        System.out.println("NEw matrix is :");
+        System.out.println("After Addition  :");
         for(int i=0;i<m1.m;i++)
         {
             for(int j=0;j<m1.n;j++)
