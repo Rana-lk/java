@@ -1,0 +1,27 @@
+import java.util.Scanner;
+class Complex {
+    int a,b;
+    Scanner sc=new Scanner(System.in);
+   
+    void create()
+    {
+        System.out.print("Enter the imaginary part : ");
+        a=sc.nextInt();
+        System.out.print("Enter the real number : ");
+        b=sc.nextInt();
+    }
+    static void add(Complex c,Complex d)
+    {
+        System.out.print("Sum of given complex number is "+(c.a+d.a)+" + "+(c.b+d.b)+"i");
+    }
+    public static void main(String args[])
+    {
+        Complex c=new Complex();
+        Complex d=new Complex();
+        c.create();
+        d.create();
+        Complex sum=new Complex();
+        add(c,d);
+    }
+
+}
