@@ -3,3 +3,5 @@
 1.[Matrix Operation](matrix_operations)
 
 2.[Complex Addition](complex_addition)
+
+3.[Array Search](array_search)
