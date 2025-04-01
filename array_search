@@ -1,0 +1,57 @@
+import java.util.Scanner;
+public class Search {
+    int a[],n;
+    Scanner sc=new Scanner(System.in);
+    void create()
+    {
+        System.out.print("Enter the size of array :");
+        n=sc.nextInt();
+        a=new int[n];
+        System.out.print("Enter the values in the array :");
+        for(int i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        
+    }
+
+    void display()
+    {
+        System.out.print("Elements are :\n");
+        for(int i=0;i<n;i++)
+        {
+            System.out.print(a[i]+" ");
+        }
+    }
+
+    void search()
+    {
+        System.out.print("\n Enter the element to search :");
+        int m=sc.nextInt();
+        boolean check=false;
+        for(int i=0;i<n;i++)
+        {
+            if(m==a[i])
+            {
+                check=true;
+                break;
+            }
+        }
+
+        if(!check)
+        {
+            System.out.print(m+" is not present");
+        }
+        else
+        {
+            System.out.print(m+" is present");
+        }
+    }
+    public static void main(String args[])
+    {
+        Search ob=new Search();
+        ob.create();
+        ob.display();
+        ob.search();
+    }
+}
