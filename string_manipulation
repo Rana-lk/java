@@ -1,0 +1,112 @@
+import java.util.Scanner;
+class StringManipulation{
+    String s;
+    static Scanner sc=new Scanner(System.in);
+    void ask()
+    {
+        System.out.print("Enter a String : ");
+        sc.nextLine();
+        s=sc.nextLine();
+    }
+    void display()
+    {
+        System.out.println(s);
+    }
+    void length()
+    {
+        System.out.println("Length of the given string is "+s.length());
+    }
+
+    void lowerCase()
+    {
+        System.out.println(s.toLowerCase());
+    }
+
+    void upperCase()
+    {
+        System.out.println(s.toUpperCase());
+    }
+
+    void subString()
+    {
+        System.out.print("Enter a substring to check if it is present or not : ");
+        sc.nextLine();
+        String st=sc.nextLine();
+        if(s.contains(st))
+        {
+            System.out.println("Given substring is present  ");
+        }
+        else{
+            System.out.println("Given substring is not present ");
+        }
+    }
+
+    void index()
+    {
+        char ch[]=s.toCharArray();
+        System.out.print("Enter a character to find it's index : ");
+        sc.nextLine();
+        String find=sc.nextLine();
+        char target=find.charAt(0);
+        int index=s.indexOf(target);
+        if(index!=-1)
+        {
+            System.out.println("Index of given character is "+index);
+        }
+        else{
+            System.out.println("Given character not found ");
+        }
+
+    }
+    public static void main(String args[])
+    {
+      
+        StringManipulation obj=new StringManipulation();
+        boolean check=true;
+        
+        
+        while (check) { 
+            System.out.println("1. Create a String\n2. Display the string\n3. Find the length of the string\n4. Convert to lower case\n5. Convert to Uppercase\n6. check substring\n7. find index \n8.  Exit \n");
+            System.out.print("Enter your choice :");
+            int n=sc.nextInt();
+            switch(n)
+            {
+                case 1:
+                obj.ask();
+                break;
+
+                case 2:
+                obj.display();
+                break;
+
+                case 3:
+                obj.length();
+                break;
+
+                case 4:
+                obj.lowerCase();
+                break;
+
+                case 5:
+                obj.upperCase();
+                break;
+
+                case 6:
+                obj.subString();
+                break;
+
+                case 7:
+                obj.index();
+                break;
+
+                case 8:
+                check=false;
+                break;
+
+                default:
+                System.out.print("Invalid choice !!");
+            }
+        }
+
+    }
+}
