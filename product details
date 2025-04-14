@@ -1,0 +1,55 @@
+//define a class product with members product code, name and price. create 3 objects of product class and find the product having lower price. 
+
+import java.util.Scanner;
+public class Product {
+    Scanner sc=new Scanner(System.in);
+    String code;
+    String name;
+    int price;
+    void create()
+    {
+        System.out.print("Enter product code : ");
+        code=sc.nextLine();
+        System.out.print("Enter name of the product : ");
+        name=sc.nextLine();
+        System.out.print("Enter the price of the product : ");
+        price=sc.nextInt();
+        sc.nextLine();
+    }
+
+    void greatest(Product obj1,Product obj2,Product obj3)
+    {
+        if(obj1.price < obj2.price && obj1.price < obj3.price)
+        {
+            System.out.println("Details about the person has lowest salary :");
+            display(obj1);
+        }
+        else if(obj2.price < obj1.price && obj2.price < obj3.price)
+        {
+            System.out.println("Details about the person has lowest salary :");
+            display(obj2);
+        }
+        else {
+            System.out.println("Details about the person has lowest salary :");
+            display(obj3);
+        }
+    }
+
+    static void display(Product obj1)
+    {
+        System.out.println("Product code : "+obj1.code);
+        System.out.println("Product name : "+obj1.name);
+        System.out.println("price of the product : "+obj1.price);
+    }
+    public static void main(String args[])
+    {
+        Product obj1=new Product();
+        Product obj2=new Product();
+        Product obj3=new Product();
+        Product result=new Product();
+        obj1.create();
+        obj2.create();
+        obj3.create();
+        result.greatest(obj1,obj2,obj3);
+    }
+}
