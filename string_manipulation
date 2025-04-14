@@ -1,3 +1,5 @@
+//perform string manipulation(lowercase, uppercase, find length, find substring, find index of first occurence of character).
+
 import java.util.Scanner;
 class StringManipulation{
     String s;
