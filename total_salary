@@ -1,0 +1,36 @@
+//create a java program with a class for an employee having attributes employee number, employee name, employee salary. find total salary.
+
+import java.util.Scanner;
+public class Salary {
+    int employee_number;
+    String employee_name;
+    int basic;
+    int bonus;
+    int allowance;
+    Scanner sc=new Scanner(System.in);
+    void create()
+    {
+        System.out.print("Enter employee number : ");
+        employee_number=sc.nextInt();
+        sc.nextLine();
+        System.out.print("Enter employee name : ");
+        employee_name=sc.nextLine();
+        System.out.print("Enter basic salary : ");
+        basic=sc.nextInt();
+        System.out.print("Enter bonus : ");
+        bonus=sc.nextInt();
+        System.out.print("Enter allowance : ");
+        allowance=sc.nextInt();
+    }
+
+    void total()
+    {
+        System.out.print("Total salary of given employee is "+(basic+bonus+allowance));
+    }
+    public static void main(String args[])
+    {
+        Salary obj=new Salary();
+        obj.create();
+        obj.total();
+    }
+}
