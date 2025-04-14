@@ -7,3 +7,5 @@
 3.[Array Search](array_search)
 
 4.[String Manipulation](string_manipulation)
+
+5.[Product Details](product_details)
