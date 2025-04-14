@@ -9,3 +9,5 @@
 4.[String Manipulation](string_manipulation)
 
 5.[Product Details](product_details)
+
+6.[Total Salary](total_salary)
