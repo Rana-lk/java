@@ -1,0 +1,68 @@
+//create a class employees having attributes employee number, employee name, employee salary . 
+//read n employee data and search for an employee using the employee number(use concept of array of object)
+
+
+import java.util.*;
+public class Employee {
+    static Scanner sc=new Scanner(System.in);
+    int employee_no,employee_salary;
+    String employee_name;
+    Employee(int employee_no,String employee_name,int employee_salary)
+    {
+        this.employee_no=employee_no;
+        this.employee_name=employee_name;
+        this.employee_salary=employee_salary;
+    }
+    
+
+    void display(){
+        System.out.println("Employee number : "+employee_no);
+        System.out.println("Employee name : "+employee_name);
+        System.out.println("Employee salary : "+employee_salary);
+    }
+
+    public static void main(String args[])
+    {
+        
+        System.out.print("Enter number of employees : ");
+        int n=sc.nextInt();
+        Employee obj[]=new Employee[n];
+        for(int i=0;i<n;i++)
+        {
+            System.out.print("Enter name : ");
+            sc.nextLine();
+            String employee_name=sc.nextLine();
+            
+
+            System.out.print("Enter the employee number : ");
+            int employee_no=sc.nextInt();
+            
+
+            System.out.print("Enter salary of the employee : ");
+            int employee_salary=sc.nextInt();
+            
+
+            obj[i]=new Employee(employee_no,employee_name,employee_salary);
+
+        }
+        System.out.print("Enter the employee number to search : ");
+        int search=sc.nextInt();
+        boolean find=false;
+        for(int i=0;i<n;i++)
+        {
+            if(search==obj[i].employee_no)
+            {
+                System.out.print("Details of the employee is : \n");
+                obj[i].display();
+                find=true;
+            }
+        }
+
+        if(!find)
+        {
+            System.out.print("Invalid employee id ");
+        }
+        
+
+    }
+}
