@@ -13,3 +13,5 @@
 6.[Total Salary](total_salary)
 
 7.[Array of object](array_of_object)
+
+8.[String sorting](string_sorting1)
