@@ -16,4 +16,4 @@
 
 8.[String sorting1](string_sorting1)
 
-9.[String sorting2[(string_sorting2)
+9.[String sorting2](string_sorting2)
