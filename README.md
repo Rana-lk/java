@@ -14,4 +14,6 @@
 
 7.[Array of object](array_of_object)
 
-8.[String sorting](string_sorting1)
+8.[String sorting1](string_sorting1)
+
+9.[String sorting2[(string_sorting2)
